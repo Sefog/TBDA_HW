@@ -1,0 +1,26 @@
+--Q1
+USE [master]
+CREATE DATABASE TEST
+GO
+
+--Q2
+
+CREATE TABLE Products (
+	PrdId INT IDENTITY (200, 20) PRIMARY KEY,
+	PrdName nvarchar(40) NOT NULL, 
+	CreateDate DATE DEFAULT GETDATE (),
+	Price MONEY NOT NULL,
+	SupId INT FOREIGN KEY REFERENCES Suppliers(SupId) NOT NULL ,
+	CatId INT FOREIGN KEY REFERENCES Categories(SupId) NOT NULL
+	)
+	
+
+	
+
+
+
+
+
+
+
+
